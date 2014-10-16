@@ -22,15 +22,8 @@ public class test {
     public static void main(String[] args) throws OutOfVectorDimension {
         Vector3D v = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(), Double.class),
                 u = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(), Double.class); 
-        v.set(Dimension.x, 1.0);
-        v.set(Dimension.y, 0.0);
-        v.set(Dimension.z, 0.0);
-        v.set(Dimension.x, 0.0);
-        v.set(Dimension.y, 0.0);
-        v.set(Dimension.z, -1.0);
+		Vector3D AB = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension, Integer.class);
         v.crossProduct(u);
         System.out.println(v);
-
-        
     }
 }

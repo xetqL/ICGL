@@ -16,8 +16,9 @@ import DataStructure.Vector3D;
  */
 public class VectorFactory {
     public static Vector getVector(Dimension d, Class c){
+		int thirdDimensionValue = Dimension.getThirdDimension.value();
         if(c == Double.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<Double> res = new Vector3D<>();
                 return res;
             }else{
@@ -27,7 +28,7 @@ public class VectorFactory {
         }
         
         if(c == Integer.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<Integer> res = new Vector3D<>();
                 return res;
             }else{
@@ -37,7 +38,7 @@ public class VectorFactory {
         }
         
         if(c == Float.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<Float> res = new Vector3D<>();
                 return res;
             }else{
@@ -47,7 +48,7 @@ public class VectorFactory {
         }
         
         if(c == BigInteger.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<BigInteger> res = new Vector3D<>();
                 return res;
             }else{
@@ -57,7 +58,7 @@ public class VectorFactory {
         }
         
         if(c == Short.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<Short> res = new Vector3D<>();
                 return res;
             }else{
@@ -67,7 +68,7 @@ public class VectorFactory {
         }
         
         if(c == BigDecimal.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<BigDecimal> res = new Vector3D<>();
                 return res;
             }else{
@@ -77,7 +78,7 @@ public class VectorFactory {
         }
         
         if(c == Byte.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<Byte> res = new Vector3D<>();
                 return res;
             }else{
@@ -87,7 +88,7 @@ public class VectorFactory {
         }
         
         if(c == Long.class){
-            if(d.value() == Dimension.getThirdDimension().value()){
+            if(d.value() == thirdDimensionValue){
                 Vector3D<Long> res = new Vector3D<>();
                 return res;
             }else{
