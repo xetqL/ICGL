@@ -8,5 +8,8 @@ package DataStructure;
 /**
  *
  * @author Boulmier
+ * @param <T>
  */
-public interface PlanaryObject {}
+public class KPoint<T extends Number> extends KObject<T>{
+    
+}

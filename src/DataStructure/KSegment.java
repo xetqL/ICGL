@@ -9,17 +9,17 @@ package DataStructure;
  *
  * @author Boulmier
  */
-public class Point extends Couple<Double,Double> implements PlanaryObject{
+public class KSegment extends Couple<KPoint,KPoint>{
 
-    public Point(Double a, Double b) {
+    public KSegment(KPoint a, KPoint b) {
         super(a, b);
     }
     
-    public double getX(){
+    public KPoint getStart(){
         return getA();
     }
     
-    public double getY(){
+    public KPoint getEnd(){
         return getB();
     }
 }
