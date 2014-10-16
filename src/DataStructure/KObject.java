@@ -15,19 +15,25 @@ import java.util.ArrayList;
  * @param <T>
  */
 public abstract class KObject<T extends Number> extends ArrayList<T> implements PlanaryObject{
-
-    private static final Number ZERO = 0;
+    protected final Dimension dim;
+    private static final Number ZERO = 0.0;
 
     public KObject(Dimension d) { //initialized as null vector
-        init(d.value());
+        dim = d;
+        init(dim.value());
     }
 
     public KObject() {
-        init(DimensionConfig.global_dimension.value());
+        dim = DimensionConfig.global_dimension;
+        init(dim.value());
     }
 
-    private void init(int dim) {
-        for (int i = 0; i < dim; i++) {
+    public Dimension getDim() {
+        return dim;
+    }
+    
+    protected final void init(int dim) {
+        for (int i = 0; i <= dim; i++) {
             this.add((T) ZERO);
         }
     }
@@ -49,13 +55,17 @@ public abstract class KObject<T extends Number> extends ArrayList<T> implements 
      *
      * @param d
      * @param value
+     * @throws DataStructure.OutOfVectorDimension
      */
-    public void set(Dimension d, T value) throws OutOfVectorDimension {
+    public void set(Dimension d, T value){
         try{
-            set(d.value(), value);
+            if(value.getClass() == get(d).getClass())
+                set(d.value(), value);
+            else throw new ArithmeticException("Bad number's type !");
         }catch(IndexOutOfBoundsException e){
-            throw new OutOfVectorDimension();
+            System.err.println("Out of Vector Dimension ! ");
         }
     }
 
+    
 }

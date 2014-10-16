@@ -5,63 +5,33 @@
  */
 package DataStructure;
 
+import java.util.function.Function;
+
 /**
  *
  * @author Boulmier
+ * @param <T>
  */
-public class Vector3D extends Triplet<Double, Double, Double> implements PlanaryObject{
-
-    public Vector3D(Double a, Double b, Double c) {
-        super(a, b, c);
+public class Vector3D<T extends Number> extends KVector<T>{
+    
+    public Vector3D(Number a, Number b, Number c) {
+        super(Dimension.getThirdDimension());
+        this.set(0, (T) a);
+        this.set(1, (T) b);
+        this.set(2, (T) c);
     }
-
-    public Double getX() {
-        return getA();
-    }
-
-    public Double getY() {
-        return getB();
-    }
-
-    public Double getZ() {
-        return getC();
-    }
-
-    public Vector3D cross(Vector3D v1) {
-        return new Vector3D(
-                (this.getZ() * v1.getX()) - (this.getX() * v1.getZ()),
-                (this.getX() * v1.getY()) - (this.getY() * v1.getX()),
-                (this.getY() * v1.getZ()) - (this.getZ() * v1.getY())
-        );
-    }
-
-    public Vector3D add(Vector3D v1) {
-        return new Vector3D(
-                this.getX() + v1.getX(),
-                this.getY() + v1.getY(),
-                this.getZ() + v1.getZ()
-        );
-    }
-
-    public Vector3D sub(Vector3D v1) {
-        return new Vector3D(
-                this.getX() - v1.getX(),
-                this.getY() - v1.getY(),
-                this.getZ() - v1.getZ()
-        );
-    }
-
-    public Vector3D mul(Double x) {
-        return new Vector3D(
-                this.getX() * x,
-                this.getY() * x,
-                this.getZ() * x
-        );
-    }
-
-    public Double scalar(Vector3D v1) {
-        return this.getX() * v1.getX() + 
-               this.getY() * v1.getY() + 
-               this.getZ() * v1.getZ();
+    public Vector3D() {
+        super(Dimension.getThirdDimension());
+    }    
+    
+    /**
+     * works only in 3 dimensional vector
+     * @param v1
+     * @return 
+     */
+    public KVector<T> crossProduct(Vector v1) {
+        Number n1 = this.get(0);
+        FunctionProvider f = VectorClassFunctionProvider.provideFunctions(n1.getClass());
+        return (KVector<T>) f.crossProduct(new Couple(this,v1));
     }
 }

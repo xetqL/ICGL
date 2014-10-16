@@ -12,13 +12,21 @@ package DataStructure;
  */
 public class Dimension {
     private final int dim;
-
+    public static Dimension x = getFirstDimension(),y=getSecondDimension(),z=getThirdDimension();
     private Dimension(int dim) {
         this.dim = dim;
     }
     
     public static Dimension getFirstDimension(){
         return new Dimension(1);
+    }
+    
+    public static Dimension getThirdDimension(){
+        return new Dimension(3);
+    }
+    
+    public static Dimension getSecondDimension(){
+        return new Dimension(2);
     }
     
     public static Dimension getDimension(int dim) throws BadDimensionException{
@@ -29,11 +37,19 @@ public class Dimension {
     
     @Override
     public String toString() {
-        return (dim == 1)? String.valueOf(dim)+"st dimension" :
-                           String.valueOf(dim)+"th dimension";
+        switch(dim){
+            case 1:
+                return dim+ "st dimension";
+            case 2:
+                return dim+ "nd dimension";
+            case 3:
+                return dim+ "rd dimension";
+            default:
+                return dim+ "th dimension";
+        }
     }
     
     public int value(){
-        return dim;
+        return dim-1;
     }
 }

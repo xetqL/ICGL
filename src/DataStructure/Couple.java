@@ -6,7 +6,7 @@ package DataStructure;
  * @param <T1> left type
  * @param <T2> right type
  */
-public abstract class Couple<T1, T2> {
+public class Couple<T1, T2> {
     
     private final T1 a;
     private final T2 b;

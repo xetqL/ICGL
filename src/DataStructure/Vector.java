@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DataStructure;
 
 /**
  *
  * @author antho
  */
-public class OutOfVectorDimension extends Exception {
+public interface Vector {
+    public KVector add(Vector k);
+    public KVector mul(Number k);
+    public KVector sub(Vector k);
+    public Number dotProduct(Vector k);
 
-    public OutOfVectorDimension() {
-        super("Vector is an inferior dimension");
-    }
-    
 }
