@@ -22,5 +22,4 @@ public class KPoint<T extends Number> extends KObject<T> implements Point{
         return f.distance(p2, p2);
     }
     
-    
 }

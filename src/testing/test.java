@@ -17,8 +17,8 @@ import DataStructure.VectorFactory;
  */
 public class test {
     public static void main(String[] args){
-        Vector3D v = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(),  Integer.class),
-                 u = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(),  Integer.class); 
+        Vector3D v = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(),  Double.class),
+                 u = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(),  Double.class); 
 	Vector3D AB = (Vector3D) VectorFactory.getVector(Dimension.getThirdDimension(), Integer.class);
         v.crossProduct(u);
         System.out.println(u);
