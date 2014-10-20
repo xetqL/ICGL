@@ -9,7 +9,7 @@ package DataStructure;
  *
  * @author antho
  */
-public class VectorClassFunctionProvider {
+public class ClassFunctionProvider {
 
     public static FunctionProvider provideFunctions(Class forWhat) {
         if (forWhat == Double.class) {

@@ -31,7 +31,7 @@ public class Vector3D<T extends Number> extends KVector<T>{
      */
     public KVector<T> crossProduct(Vector v1) {
         Number n1 = this.get(0);
-        FunctionProvider f = VectorClassFunctionProvider.provideFunctions(n1.getClass());
+        FunctionProvider f = ClassFunctionProvider.provideFunctions(n1.getClass());
         return (KVector<T>) f.crossProduct(new Couple(this,v1));
     }
 }

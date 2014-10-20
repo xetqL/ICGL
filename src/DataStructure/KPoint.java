@@ -10,9 +10,17 @@ package DataStructure;
  * @author Boulmier
  * @param <T>
  */
-public class KPoint<T extends Number> extends KObject<T>{
+public class KPoint<T extends Number> extends KObject<T> implements Point{
 
     public KPoint(Dimension d, Class c) {
         super(d, c);
     }
+
+    @Override
+    public Double distance(KPoint p2) {
+        FunctionProvider f = ClassFunctionProvider.provideFunctions(internType);
+        return f.distance(p2, p2);
+    }
+    
+    
 }

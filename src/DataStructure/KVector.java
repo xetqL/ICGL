@@ -26,25 +26,25 @@ public class KVector<T extends Number> extends KObject<T> implements Vector{
 
     @Override
     public KVector add(Vector k) {
-        FunctionProvider f = VectorClassFunctionProvider.provideFunctions(this.get(0).getClass());
+        FunctionProvider f = ClassFunctionProvider.provideFunctions(this.get(0).getClass());
         return f.add(new Couple(this,k));
     }
 
     @Override
     public KVector mul(Number k) {
-        FunctionProvider f = VectorClassFunctionProvider.provideFunctions(this.get(0).getClass());
+        FunctionProvider f = ClassFunctionProvider.provideFunctions(this.get(0).getClass());
         return f.mul(this, k);    
     }
 
     @Override
     public KVector sub(Vector k) {
-        FunctionProvider f = VectorClassFunctionProvider.provideFunctions(this.get(0).getClass());
+        FunctionProvider f = ClassFunctionProvider.provideFunctions(this.get(0).getClass());
         return f.sub(new Couple(this,k));    
     }
 
     @Override
     public Number dotProduct(Vector k) {
-        FunctionProvider f = VectorClassFunctionProvider.provideFunctions(this.get(0).getClass());
+        FunctionProvider f = ClassFunctionProvider.provideFunctions(this.get(0).getClass());
         return (T) f.dotProduct(new Couple(this,k));
     }
     

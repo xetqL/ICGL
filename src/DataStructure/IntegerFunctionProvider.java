@@ -62,4 +62,12 @@ public class IntegerFunctionProvider implements FunctionProvider {
         }
         return k;
     }
+    
+    public Double distance(KPoint p1, KPoint p2){
+        Double sumSquared = 0.0;
+        for(int i = 0; i < p1.size(); i++){
+            sumSquared += java.lang.Math.pow( (int)p1.get(i) - (int)p2.get(i) , 2);
+        }
+        return java.lang.Math.sqrt(sumSquared);
+    }
 }

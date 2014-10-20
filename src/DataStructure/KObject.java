@@ -9,6 +9,7 @@ import config.DimensionConfig;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Dimension k point
@@ -19,11 +20,17 @@ import java.util.Map;
 public abstract class KObject<T extends Number> extends ArrayList<T> implements PlanaryObject {
 
     protected final Dimension dim;
-    private static final Map<Class<? extends Number>, Object> zeroes = new HashMap<>();
+    
+    private static final Map<Class<? extends Number>, Number> zeroes = new HashMap<>();
     static {
         zeroes.put(Integer.class, 0);
         zeroes.put(Double.class, 0.0);
         zeroes.put(Float.class, (float) 0.0);
+        zeroes.put(Long.class, (long) 0);
+        zeroes.put(float.class, (float) 0.0);
+        zeroes.put(int.class, 0);
+        zeroes.put(double.class, 0.0);
+        zeroes.put(long.class, (long) 0);
     }
     protected final Class internType;
 
@@ -36,7 +43,6 @@ public abstract class KObject<T extends Number> extends ArrayList<T> implements 
     public Dimension getDim() {
         return dim;
     }
-
 
     protected final void init(int dim, T value) {
         for (int i = 0; i <= dim; i++) {

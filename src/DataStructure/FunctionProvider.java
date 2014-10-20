@@ -15,4 +15,5 @@ public interface FunctionProvider {
     public KVector sub(Couple k1k2);
     public KVector mul(KVector k1, Number s1);
     public Number  dotProduct(Couple k1k2);
+    public Double distance(KPoint p1, KPoint p2);
 }
