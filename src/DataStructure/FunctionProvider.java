@@ -14,5 +14,5 @@ public interface FunctionProvider {
     public KVector add(Couple k1k2);
     public KVector sub(Couple k1k2);
     public KVector mul(KVector k1, Number s1);
-    public Number dotProduct(Couple k1k2);
+    public Number  dotProduct(Couple k1k2);
 }

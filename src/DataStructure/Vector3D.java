@@ -14,16 +14,16 @@ import java.util.function.Function;
  */
 public class Vector3D<T extends Number> extends KVector<T>{
     
-    public Vector3D(Number a, Number b, Number c) {
-        super(Dimension.getThirdDimension());
+    public Vector3D(Number a, Number b, Number c, Class type) {
+        super(Dimension.getThirdDimension() , type);
         this.set(0, (T) a);
         this.set(1, (T) b);
         this.set(2, (T) c);
     }
-    public Vector3D() {
-        super(Dimension.getThirdDimension());
-    }    
     
+    public Vector3D(Class c) {
+        super(Dimension.getThirdDimension(), c);
+    }
     /**
      * works only in 3 dimensional vector
      * @param v1

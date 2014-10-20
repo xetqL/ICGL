@@ -11,5 +11,8 @@ package DataStructure;
  * @param <T>
  */
 public class KPoint<T extends Number> extends KObject<T>{
-    
+
+    public KPoint(Dimension d, Class c) {
+        super(d, c);
+    }
 }

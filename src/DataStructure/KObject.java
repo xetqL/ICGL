@@ -7,6 +7,8 @@ package DataStructure;
 
 import config.DimensionConfig;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Dimension k point
@@ -14,27 +16,31 @@ import java.util.ArrayList;
  * @author antho
  * @param <T>
  */
-public abstract class KObject<T extends Number> extends ArrayList<T> implements PlanaryObject{
+public abstract class KObject<T extends Number> extends ArrayList<T> implements PlanaryObject {
+
     protected final Dimension dim;
-    private static final Number ZERO = 0.0;
-
-    public KObject(Dimension d) { //initialized as null vector
-        dim = d;
-        init(dim.value());
+    private static final Map<Class<? extends Number>, Object> zeroes = new HashMap<>();
+    static {
+        zeroes.put(Integer.class, 0);
+        zeroes.put(Double.class, 0.0);
+        zeroes.put(Float.class, (float) 0.0);
     }
+    protected final Class internType;
 
-    public KObject() {
-        dim = DimensionConfig.global_dimension;
-        init(dim.value());
+    public KObject(Dimension d, Class c) { //initialized as null vector
+        dim = d;
+        internType = c;
+        init(dim.value(), (T) zeroes.get(c));
     }
 
     public Dimension getDim() {
         return dim;
     }
-    
-    protected final void init(int dim) {
+
+
+    protected final void init(int dim, T value) {
         for (int i = 0; i <= dim; i++) {
-            this.add((T) ZERO);
+            this.add(value);
         }
     }
 
@@ -47,7 +53,7 @@ public abstract class KObject<T extends Number> extends ArrayList<T> implements 
         try {
             return this.get(d.value());
         } catch (IndexOutOfBoundsException e) {
-            return (T) KObject.ZERO;
+            return (T) zeroes.get(internType);
         }
     }
 
@@ -55,17 +61,17 @@ public abstract class KObject<T extends Number> extends ArrayList<T> implements 
      *
      * @param d
      * @param value
-     * @throws DataStructure.OutOfVectorDimension
      */
-    public void set(Dimension d, T value){
-        try{
-            if(value.getClass() == get(d).getClass())
+    public void set(Dimension d, T value) {
+        try {
+            if (value.getClass() == get(d).getClass()) {
                 set(d.value(), value);
-            else throw new ArithmeticException("Bad number's type !");
-        }catch(IndexOutOfBoundsException e){
+            } else {
+                throw new ArithmeticException("Bad number's type !");
+            }
+        } catch (IndexOutOfBoundsException e) {
             System.err.println("Out of Vector Dimension ! ");
         }
     }
 
-    
 }

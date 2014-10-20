@@ -15,12 +15,9 @@ import java.util.Iterator;
  */
 public class KVector<T extends Number> extends KObject<T> implements Vector{
     
-    public KVector() {
-        super();
-    }
     
-    public KVector(Dimension d){
-        super(d);
+    public KVector(Dimension d, Class c){
+        super(d, c);
     }
     
     private boolean valid(Number a, Number b){
@@ -56,7 +53,7 @@ public class KVector<T extends Number> extends KObject<T> implements Vector{
         StringBuilder s = new StringBuilder().append('(');
         Iterator<T> it = this.iterator();
         s.append(it.next().toString());
-        while(it.hasNext()) s.append(',').append(it.next().toString());
+        while(it.hasNext()) s.append(',').append(((T) it.next()).toString());
         s.append(')');
         return s.toString();
     }
