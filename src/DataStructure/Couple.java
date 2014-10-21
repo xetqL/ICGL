@@ -26,6 +26,6 @@ public class Couple<T1, T2> {
 
     @Override
     public String toString() {
-        return " ("+a.toString()+","+b.toString()+") ";
+        return " ("+a.toString()+" , "+b.toString()+") ";
     }
 }

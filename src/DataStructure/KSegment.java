@@ -9,7 +9,7 @@ package DataStructure;
  *
  * @author Boulmier
  */
-public class KSegment extends Couple<KPoint,KPoint>{
+public class KSegment extends Couple<KPoint,KPoint> implements SpaceElement{
 
     public KSegment(KPoint a, KPoint b) {
         super(a, b);

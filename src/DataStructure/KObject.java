@@ -5,11 +5,9 @@
  */
 package DataStructure;
 
-import config.DimensionConfig;
+import FunctionProvider.ClassFunctionProvider;
+import FunctionProvider.FunctionProvider;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
 
 /**
  * Dimension k point
@@ -17,31 +15,35 @@ import java.util.Random;
  * @author antho
  * @param <T>
  */
-public abstract class KObject<T extends Number> extends ArrayList<T> implements PlanaryObject {
+public abstract class KObject<T extends Number> extends ArrayList<T> implements SpaceElement {
 
     protected final Dimension dim;
-    
-    private static final Map<Class<? extends Number>, Number> zeroes = new HashMap<>();
-    static {
-        zeroes.put(Integer.class, 0);
-        zeroes.put(Double.class, 0.0);
-        zeroes.put(Float.class, (float) 0.0);
-        zeroes.put(Long.class, (long) 0);
-        zeroes.put(float.class, (float) 0.0);
-        zeroes.put(int.class, 0);
-        zeroes.put(double.class, 0.0);
-        zeroes.put(long.class, (long) 0);
-    }
     protected final Class internType;
+    protected final FunctionProvider f;
 
-    public KObject(Dimension d, Class c) { //initialized as null vector
+    public KObject(Dimension d, Class<? extends Number> c, boolean init, Class<? extends KObject> what) { //initialized as null vector
         dim = d;
         internType = c;
-        init(dim.value(), (T) zeroes.get(c));
+        if (init) {
+            if (!Values.zeroes.containsKey(c)) {
+                throw new UnsupportedOperationException(c.getName() + " is not supported for the moment");
+            }
+            init(dim.value(), (T) Values.zeroes.get(c));
+        }
+        f = ClassFunctionProvider.provideFunctions(c, what);
     }
 
     public Dimension getDim() {
         return dim;
+    }
+
+    @Override
+    public T get(int index) {
+        if (index < this.size()) {
+            return super.get(index);
+        } else {
+            return (T) Values.zeroes.get(internType);
+        }
     }
 
     protected final void init(int dim, T value) {
@@ -56,11 +58,7 @@ public abstract class KObject<T extends Number> extends ArrayList<T> implements 
      * @return value of the D dimension
      */
     public T get(Dimension d) {
-        try {
-            return this.get(d.value());
-        } catch (IndexOutOfBoundsException e) {
-            return (T) zeroes.get(internType);
-        }
+        return this.get(d.value());
     }
 
     /**

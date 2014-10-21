@@ -5,21 +5,21 @@
  */
 package DataStructure;
 
+import FunctionProvider.PointFunctionProvider;
+
 /**
  *
  * @author Boulmier
  * @param <T>
  */
 public class KPoint<T extends Number> extends KObject<T> implements Point{
-
-    public KPoint(Dimension d, Class c) {
-        super(d, c);
+    public KPoint(Dimension d, Class<? extends Number> c) {
+        super(d, c, true, KPoint.class);
     }
-
+    
     @Override
     public Double distance(KPoint p2) {
-        FunctionProvider f = ClassFunctionProvider.provideFunctions(internType);
-        return f.distance(p2, p2);
+        return ((PointFunctionProvider) f).distance(p2, p2);
     }
     
 }

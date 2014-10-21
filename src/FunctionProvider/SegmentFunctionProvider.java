@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DataStructure;
+package FunctionProvider;
 
 /**
  *
  * @author Boulmier
  */
-public interface PlanaryObject {}
+public interface SegmentFunctionProvider extends FunctionProvider{
+    
+}

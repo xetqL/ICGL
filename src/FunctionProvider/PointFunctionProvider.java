@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package FunctionProvider;
 
-package DataStructure;
+import DataStructure.KPoint;
 
 /**
  *
- * @author antho
+ * @author Boulmier
  */
-interface VectorFunction{}
+public interface PointFunctionProvider extends FunctionProvider{
+    public Double distance(KPoint p1, KPoint p2);
+}

@@ -3,17 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DataStructure;
 
 /**
  *
- * @author antho
+ * @author Boulmier
  */
-public class BadDimensionException extends Exception {
-
-    public BadDimensionException() {
-        super("Dimension cannot be inferior or equals to zero");
-    }
-    
-}
+public interface SpaceElement {}

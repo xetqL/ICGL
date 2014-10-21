@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package DataStructure;
 
 /**
@@ -11,45 +10,54 @@ package DataStructure;
  * @author antho
  */
 public class Dimension {
+
     private final int dim;
-    public static Dimension x = getFirstDimension(),y=getSecondDimension(),z=getThirdDimension();
+    public static Dimension x = getFirstDimension(), y = getSecondDimension(), z = getThirdDimension();
+
     private Dimension(int dim) {
         this.dim = dim;
     }
-    
-    public static Dimension getFirstDimension(){
+
+    public static Dimension getFirstDimension() {
         return new Dimension(1);
     }
-    
-    public static Dimension getThirdDimension(){
+
+    public static Dimension getThirdDimension() {
         return new Dimension(3);
     }
-    
-    public static Dimension getSecondDimension(){
+
+    public static Dimension getSecondDimension() {
         return new Dimension(2);
     }
-    
-    public static Dimension getDimension(int dim) throws BadDimensionException{
-        if(dim >= 1){
-            return new Dimension(dim);
-        }else throw new BadDimensionException();
+
+    public static Dimension getDimension(int dim) {
+        try {
+            if (dim >= 1) {
+                return new Dimension(dim);
+            } else {
+                throw new BadDimensionException();
+            }
+        } catch (BadDimensionException bde) {
+            System.out.println(bde.getMessage());
+        }
+        return null;
     }
-    
+
     @Override
     public String toString() {
-        switch(dim){
+        switch (dim) {
             case 1:
-                return dim+ "st dimension";
+                return dim + "st dimension";
             case 2:
-                return dim+ "nd dimension";
+                return dim + "nd dimension";
             case 3:
-                return dim+ "rd dimension";
+                return dim + "rd dimension";
             default:
-                return dim+ "th dimension";
+                return dim + "th dimension";
         }
     }
-    
-    public int value(){
-        return dim-1;
+
+    public int value() {
+        return dim - 1;
     }
 }
