@@ -5,10 +5,7 @@
  */
 package DataStructure;
 
-import FunctionProvider.ClassFunctionProvider;
-import FunctionProvider.FunctionProvider;
 import FunctionProvider.VectorFunctionProvider;
-import java.util.function.Function;
 
 /**
  *
@@ -17,11 +14,18 @@ import java.util.function.Function;
  */
 public class Vector3D<T extends Number> extends Vector<T>{
     
-    public Vector3D(Number a, Number b, Number c, Class type) {
+    public Vector3D(T a, T b, T c, Class type) {
         super(Dimension.getThirdDimension() , type);
         this.set(0, (T) a);
         this.set(1, (T) b);
         this.set(2, (T) c);
+    }
+    
+    public Vector3D(T[] data, Class type){
+        super(Dimension.getThirdDimension() , type);
+        this.set(0, data[0]);
+        this.set(1, data[1]);
+        this.set(2, data[2]);
     }
     
     public Vector3D(Class c) {
@@ -33,6 +37,6 @@ public class Vector3D<T extends Number> extends Vector<T>{
      * @return 
      */
     public Vector3D<T> crossProduct(Vector v1) {
-        return (Vector3D<T>) ((VectorFunctionProvider)f).crossProduct(new Couple(this,v1));
+        return (Vector3D<T>) ((VectorFunctionProvider)f).crossProduct( new Couple(this , v1) );
     }
 }

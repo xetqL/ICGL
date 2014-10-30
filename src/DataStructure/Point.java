@@ -10,5 +10,5 @@ package DataStructure;
  * @author Boulmier
  */
 public interface Point {
-    public Double distance(KPoint p2);
+    public Double distance(Point p2);
 }

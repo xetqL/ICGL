@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DataStructure.FunctionProvider.Segment;
+package FunctionProvider.Segment;
 
+import DataStructure.KPoint;
+import DataStructure.KSegment;
 import FunctionProvider.FunctionProvider;
 import FunctionProvider.SegmentFunctionProvider;
 
@@ -15,6 +17,11 @@ import FunctionProvider.SegmentFunctionProvider;
 public class IntegerSegmentFunctionProvider implements SegmentFunctionProvider {
 
     public IntegerSegmentFunctionProvider() {
+    }
+
+    @Override
+    public <T extends Number> KPoint<T> intersect(KSegment s1, KSegment s2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

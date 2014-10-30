@@ -5,10 +5,13 @@
  */
 package FunctionProvider;
 
+import DataStructure.KPoint;
+import DataStructure.KSegment;
+
 /**
  *
  * @author Boulmier
  */
 public interface SegmentFunctionProvider extends FunctionProvider{
-    
+    public <T extends Number> KPoint<T> intersect(KSegment s1, KSegment s2);
 }

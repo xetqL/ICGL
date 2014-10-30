@@ -18,7 +18,7 @@ public class KPoint<T extends Number> extends KObject<T> implements Point{
     }
     
     @Override
-    public Double distance(KPoint p2) {
+    public Double distance(Point p2) {
         return ((PointFunctionProvider) f).distance(p2, p2);
     }
     

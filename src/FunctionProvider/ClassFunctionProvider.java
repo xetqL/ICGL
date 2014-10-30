@@ -5,12 +5,12 @@
  */
 package FunctionProvider;
 
-import DataStructure.FunctionProvider.Segment.DoubleSegmentFunctionProvider;
-import DataStructure.FunctionProvider.Segment.IntegerSegmentFunctionProvider;
-import DataStructure.FunctionProvider.Segment.FloatSegmentFunctionProvider;
-import DataStructure.FunctionProvider.Point.IntegerPointFunctionProvider;
-import DataStructure.FunctionProvider.Point.FloatPointFunctionProvider;
-import DataStructure.FunctionProvider.Point.DoublePointFunctionProvider;
+import FunctionProvider.Segment.DoubleSegmentFunctionProvider;
+import FunctionProvider.Segment.IntegerSegmentFunctionProvider;
+import FunctionProvider.Segment.FloatSegmentFunctionProvider;
+import FunctionProvider.Point.IntegerPointFunctionProvider;
+import FunctionProvider.Point.FloatPointFunctionProvider;
+import FunctionProvider.Point.DoublePointFunctionProvider;
 import DataStructure.KPoint;
 import DataStructure.KSegment;
 import DataStructure.SpaceElement;

@@ -4,23 +4,36 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/KObject.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Vector2D.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/FunctionProvider.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/IntegerFunctionProvider.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Point.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/ClassFunctionProvider.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/DoubleFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/OutOfVectorDimension.java</file>
             <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Vector3D.java</file>
             <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/KPoint.java</file>
             <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/KSegment.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/VectorFunction.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/testing/test.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/FloatFunctionProvider.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/PlanaryObject.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Point/FloatPointFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Segment/FloatSegmentFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/IVector.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Vector/FloatVectorFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/BadDimensionException.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/config/DimensionConfig.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Space.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/FunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Segment/DoubleSegmentFunctionProvider.java</file>
             <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/VectorFactory.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/KVector.java</file>
-            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Triplet.java</file>
             <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Vector.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Vector/DoubleVectorFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/VectorFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Segment/IntegerSegmentFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Vector/IntegerVectorFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Point.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/SpaceElement.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/ClassFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/SegmentFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Couple.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Point/IntegerPointFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/PointFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/testing/test.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/FunctionProvider/Point/DoublePointFunctionProvider.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Values.java</file>
+            <file>file:/C:/Users/Boulmier/Documents/NetBeansProjects/ICGL/ICGL/src/DataStructure/Dimension.java</file>
         </group>
     </open-files>
 </project-private>

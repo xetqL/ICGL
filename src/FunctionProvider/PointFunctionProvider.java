@@ -5,12 +5,12 @@
  */
 package FunctionProvider;
 
-import DataStructure.KPoint;
+import DataStructure.Point;
 
 /**
  *
  * @author Boulmier
  */
 public interface PointFunctionProvider extends FunctionProvider{
-    public Double distance(KPoint p1, KPoint p2);
+    public Double distance(Point p1, Point p2);
 }
