@@ -7,12 +7,9 @@
 package testing;
 
 import DataStructure.BadDimensionException;
-import DataStructure.Dimension;
-import DataStructure.KPoint;
-import DataStructure.Point;
-import DataStructure.Space;
-import DataStructure.Vector;
-import DataStructure.VectorFactory;
+import DataStructure.BinaryTree;
+import DataStructure.Graph;
+import DataStructure.Graph.Node;
 
 
 /**
@@ -22,16 +19,21 @@ import DataStructure.VectorFactory;
 public class test {
     
     public static void main(String[] args) throws BadDimensionException{
-        Dimension d = Dimension.getDimension(50);
-        Vector v = VectorFactory.getVector(new Integer[]{0,1,0}, Integer.class),
-               u = VectorFactory.getVector(new Integer[]{0,-1,0},  Integer.class); 
-        Point p1 = new KPoint(d, Integer.class),p2 = new KPoint(d, Integer.class);
+        BinaryTree btree = new BinaryTree(10.0);
+        Graph g = new Graph(false);
+        System.out.println( g.add(new Node("B")) );
+        System.out.println( g.add(new Node("A")) );
+        System.out.println( g.add(new Node("C")) );
+        System.out.println( g.find("A") );
+        System.out.println( g.attach("A", "B") );
+        g.attach("A", "C");
+        g.attach("B", "B");
+        g.attach("B", "B");
+        btree.add(5.0);
+        btree.add(12.0);
+        btree.add(11.0);
+        btree.add(13.0);
+        System.out.println(g);
         
-        Vector k = new Vector(u, Integer.class);
-        Space space = new Space(d, Integer.class);
-        space.add(v);
-        space.add(u);
-        space.printUnitaries();
-        System.out.println(p1.distance(p2));
     }
 }
